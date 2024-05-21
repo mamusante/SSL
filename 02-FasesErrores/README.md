@@ -29,8 +29,8 @@ En GCC las principales implementaciones hacen que se genere un warning sobre la 
 Una funcion built-in es una funcion que esta implementada directamente por el compilador en lugar de estar definida en la biblioteca estandar. Estas funciones estan disponibles sin la necesidad de incluir headers.
 
 GCC se comporta generando warnings y errores para declaraciones implicitas para alinearse con el estandar C99 y posteriores, que desaconsejan y prohiben las declaraciones implicitas de funciones, esto ayuda a detectar potenciales errores en el codigo relacionados con el uso incorrecto de funciones no declaradas.
-GCC va en contra de la especificacion del lenguaje C, ya que segun su estandar se deben incluir los headers necesarios para el uso de funciones estandar como lo es printf, sin embargo GCC es mas permisivo y da cierta flexibilidad en la inclusion de headers para ciertas funciones estandar. GCC hace una inferencia de tipo para esta funcion estandar y por eso permite usarla.
-
+GCC no va en contra de la especificacion del lenguaje C, ya que aunque segun su estandar se deben incluir los headers necesarios para el uso de funciones estandar como lo es printf, sin embargo GCC es mas permisivo y da cierta flexibilidad en la inclusion de headers para ciertas funciones estandar. GCC hace una inferencia de tipo para esta funcion estandar y por eso permite usarla.
+aca tengo q poner que no va encontra sino q se queda en el gris del estandar ya que nondice q hacer en cuanto al diagnosrico
 Paso 6 Compilacion Separada: contratos y modulos
 
 b. Puedo hacerlo usando extern, esto dice que la declaracion de mi funcion o variable estara en otro archivo
