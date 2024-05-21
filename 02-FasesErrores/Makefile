@@ -1,19 +1,11 @@
-# Variables
-CC = gcc
-ASFLAGS = -Wall -O2
-CFLAGS = -Wall -O2
+hello9: hello9.o studio2.o
+	gcc hello9.o studio2.o -o hello9
 
-# Regla por defecto para generar el ejecutable
-all: hello7
+hello9.o: hello9.c studio2.c
+	gcc -c hello9.c studio2.c -o hello9.o
 
-# Regla para generar el archivo .o a partir de un archivo .s
-%.o: %.s
-	$(CC) $(ASFLAGS) -c $< -o $@
+studio2.o: studio2.c
+	gcc -c studio2.c -o studio2.o
 
-# Regla para generar el ejecutable a partir del archivo objeto
-hello7: hello7.o
-	$(CC) $(CFLAGS) hello7.o -o hello7
-
-# Limpiar archivos generados
 clean:
-	rm -f *.o hello7
+	rm -f hello9.o studio2.o

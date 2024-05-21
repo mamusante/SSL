@@ -31,3 +31,10 @@ Una funcion built-in es una funcion que esta implementada directamente por el co
 GCC se comporta generando warnings y errores para declaraciones implicitas para alinearse con el estandar C99 y posteriores, que desaconsejan y prohiben las declaraciones implicitas de funciones, esto ayuda a detectar potenciales errores en el codigo relacionados con el uso incorrecto de funciones no declaradas.
 GCC va en contra de la especificacion del lenguaje C, ya que segun su estandar se deben incluir los headers necesarios para el uso de funciones estandar como lo es printf, sin embargo GCC es mas permisivo y da cierta flexibilidad en la inclusion de headers para ciertas funciones estandar. GCC hace una inferencia de tipo para esta funcion estandar y por eso permite usarla.
 
+Paso 6 Compilacion Separada: contratos y modulos
+
+b. Puedo hacerlo usando extern, esto dice que la declaracion de mi funcion o variable estara en otro archivo
+
+c. Arroja error en ambos casos, ya que pront f recibe un char y un int, solo dos argumentos
+
+d. iv. La ventaja de incluir los contratos en el cliente y en el proovedor es que, del lado del cliente, nos evitamos escribir las declaraciones a mano en el codigo fuente, lo que puede generar errores, y del lado del proovedor asegura que haya consistencia en la informacion (si se cambia la definicion de la funcion) y, en caso de no ser asi, arrojara un error de compilacion y podremos arreglarlo.
